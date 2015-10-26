@@ -74,4 +74,5 @@ describe RestaurantsController do
       it { expect(subject).to redirect_to root_path }
     end
   end
+
 end
