@@ -17,6 +17,8 @@ gem 'turbolinks'
 
 #user auth
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
 
 group :test, :development do
   gem 'quiet_assets'

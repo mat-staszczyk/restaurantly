@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
-  resources :restaurants
 
+  resources :restaurants
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks"}
   root 'restaurants#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
