@@ -1,4 +1,4 @@
-require 'spec_helper'
+require 'rails_helper'
 
 describe RestaurantsController do
   context "GET /restaurants/:id" do
@@ -7,12 +7,12 @@ describe RestaurantsController do
     end
 
     context "resource exists" do
-      subject {get "restaurants/#{@restaurand.id}"}
+      subject {get "/restaurants/#{@restaurant.id}"}
       it { expect(subject).to render_template(:show)}
     end
 
     context "resource doesn't exist" do
-      subject {get "restaurants/#{@restaurant.id + 1}"}
+      subject {get "/restaurants/#{@restaurant.id + 1}"}
       it { expect(subject).to redirect_to(:root) }
     end
   end
